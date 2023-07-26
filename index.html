@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      overflow: hidden; /* Prevent horizontal scrolling on smaller screens */
     }
 
     .s-page-1 {
@@ -38,6 +39,7 @@
       left: 0;
       top: 0;
       pointer-events: none;
+      z-index: 13000; /* Ensure the cursor is above the canvas */
     }
     .cursor--small {
       width: 10px;
@@ -52,6 +54,12 @@
       width: 100vw;
       height: 100vh;
       z-index: 12000;
+    }
+
+    /* Make the image responsive */
+    .s-page-1 .s-section-1 .s-section img {
+      max-width: 100%; /* Ensure the image doesn't exceed its container */
+      height: auto; /* Maintain the aspect ratio of the image */
     }
   </style>
 </head>
